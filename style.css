@@ -1,0 +1,147 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin-left: 19px;
+    background-color: #E5E5E5;
+}
+h1 {
+    font-family:'Righteous', cursive;
+    font-size: 44px;
+    font-weight: 400;
+    
+}
+h2 {
+    font-family:'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 4px;
+}
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    
+}
+h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color:#A6A6A6;
+    margin-bottom: 5px;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 92px;
+    width: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    color: white;
+    padding-left: 19px;
+    background-color: #CF2B2B
+}
+.conteudo{
+    margin-top: 96px;
+}
+.conteudo img{
+    height: 87px;
+    width: 144px;
+    margin-bottom: 8px;
+}
+.subtitulo{
+    font-family:'Righteous', cursive;
+    font-size: 26px;
+    font-weight: 400;
+    color: #333333;
+    padding-top: 27px;
+    padding-bottom: 17px;
+}
+.pratos{
+    display: flex;
+    overflow-x: scroll;
+}
+.prato{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    width: 172px;
+    border-radius: 9px;
+    padding:17px 14px;
+    margin-right: 16px;
+    height: 216px;
+}
+.prato:hover{
+    cursor: pointer;
+}
+.bebidas{
+    display: flex;
+    overflow-x: scroll;
+}
+.bebida{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    height: 202px;
+    width: 172px;
+    border-radius: 9px;
+    padding:17px 14px;
+    margin-right: 16px;
+}
+.bebida:hover{
+    cursor: pointer;
+}
+.sobremesas{
+    display: flex;
+    overflow-x: scroll;
+    margin-bottom: 92px;
+}
+.sobremesa{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 197px;
+    width: 172px;
+    border-radius: 9px;
+    padding:17px 14px;
+    margin-right: 16px;
+    justify-content: space-between;
+}
+.sobremesa:hover{
+    cursor: pointer;
+}
+.sobremesa img{
+    height: 82px;
+}
+.barrafinal{
+    display: flex;
+    height: 92px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    background-color: white;
+}
+button{
+    margin: 15px 25px;
+    color: #CBCBCB;
+    height: 61px;
+    font-size: 20px;
+    border-radius: 50px;
+}
+span {
+font-family: 'Roboto', sans-serif;
+font-size: 18px;
+font-weight: 400;
+}
+.selecionado{
+    border-radius: 10px;
+    border: solid;
+    border-color: #32B72F;
+}
