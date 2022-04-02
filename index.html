@@ -21,19 +21,19 @@
        Primeiro, seu prato
     </div> 
     <div class="pratos">
-        <div class="prato" onclick="selecionar(this)">
+        <div class="prato" onclick="selecionarprato(this)">
             <img src="/images/batata.png">
             <h2>Batata Frita</h2> <h4>500g</h4> <h3>R$ 15,00</h3>
         </div>
-        <div class="prato" onclick="selecionar(this)">
+        <div class="prato" onclick="selecionarprato(this)">
             <img src="/images/batata.png">
             <h2>Batata Frita</h2> <h4>500g</h4> <h3>R$ 15,00</h3>
         </div>
-        <div class="prato" onclick="selecionar(this)">
+        <div class="prato" onclick="selecionarprato(this)">
             <img src="/images/batata.png">
             <h2>Batata Frita</h2> <h4>500g</h4> <h3>R$ 15,00</h3>
         </div>
-        <div class="prato" onclick="selecionar(this)">
+        <div class="prato" onclick="selecionarprato(this)">
             <img src="/images/batata.png">
             <h2>Batata Frita</h2> <h4>500g<br>500g</h4> <h3>R$ 15,00</h3>
         </div>
@@ -42,19 +42,19 @@
         Agora, sua bebida
     </div>
     <div class="bebidas">
-        <div class="bebida" onclick="selecionar(this)">
+        <div class="bebida" onclick="selecionarbebida(this)">
             <img src="/images/coca.jpg">
             <h2>Coca</h2> <h4>Lata 350ml</h4> <h3>R$ 4,90</h3>
         </div>
-        <div class="bebida" onclick="selecionar(this)">
+        <div class="bebida" onclick="selecionarbebida(this)">
             <img src="/images/coca.jpg">
             <h2>Coca</h2> <h4>Lata 350ml</h4> <h3>R$ 4,90</h3>
         </div>
-        <div class="bebida" onclick="selecionar(this)">
+        <div class="bebida" onclick="selecionarbebida(this)">
             <img src="/images/coca.jpg">
             <h2>Coca</h2> <h4>Lata 350ml</h4> <h3>R$ 4,90</h3>
         </div>
-        <div class="bebida" onclick="selecionar(this)">
+        <div class="bebida" onclick="selecionarbebida(this)">
             <img src="/images/coca.jpg">
             <h2>Coca</h2> <h4>Lata 350ml</h4> <h3>R$ 4,90</h3>
         </div>
@@ -63,26 +63,27 @@
         Por fim, sua sobremesa
     </div>
     <div class="sobremesas">
-        <div class="sobremesa"onclick="selecionar(this)">
+        <div class="sobremesa"onclick="selecionarsobremesa(this);botaofinal();">
             <img src="images/brigadeiro.jpg">
             <h2>Brigadeiro</h2> <h4>1 Unidade</h4> <h3>R$ 3,00</h3>
         </div>
-        <div class="sobremesa"onclick="selecionar(this)">
+        <div class="sobremesa"onclick="selecionarsobremesa(this);botaofinal();">
             <img src="images/brigadeiro.jpg">
             <h2>Brigadeiro</h2> <h4>1 Unidade</h4> <h3>R$ 3,00</h3>
         </div>
-        <div class="sobremesa"onclick="selecionar(this)">
+        <div class="sobremesa"onclick="selecionarsobremesa(this);botaofinal();">
             <img src="images/brigadeiro.jpg">
             <h2>Brigadeiro</h2> <h4>1 Unidade</h4> <h3>R$ 3,00</h3>
         </div>
-        <div class="sobremesa"onclick="selecionar(this)">
-            <img src="images/brigadeiro.jpg">
+        <div class="sobremesa"onclick="selecionarsobremesa(this);botaofinal();">
+            <img src="images/brigadeiro.jpg">  
             <h2>Brigadeiro</h2> <h4>1 Unidade</h4> <h3>R$ 3,00</h3>
         </div>
     </div>
 </div>  
 <div class="barrafinal">
-    <button>Selecione os 3 itens para fechar o pedido</button>
+    <button class="incompleto">Selecione os 3 itens para fechar o pedido</button>
+    <button class="completo hidden">Fechar pedido</button>
 </div>
 <script src="scripts.js"></script>
 </body>

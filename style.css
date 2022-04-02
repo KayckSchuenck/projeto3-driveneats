@@ -71,9 +71,10 @@ header{
     background-color: white;
     width: 172px;
     border-radius: 9px;
-    padding:17px 14px;
+    padding:17px 9px;
     margin-right: 16px;
     height: 216px;
+    border: 5px solid white;
 }
 .prato:hover{
     cursor: pointer;
@@ -90,8 +91,9 @@ header{
     height: 202px;
     width: 172px;
     border-radius: 9px;
-    padding:17px 14px;
+    padding:17px 9px;
     margin-right: 16px;
+    border: 5px solid white;
 }
 .bebida:hover{
     cursor: pointer;
@@ -108,9 +110,10 @@ header{
     height: 197px;
     width: 172px;
     border-radius: 9px;
-    padding:17px 14px;
+    padding:17px 9px;
     margin-right: 16px;
     justify-content: space-between;
+    border: 5px solid white;
 }
 .sobremesa:hover{
     cursor: pointer;
@@ -128,20 +131,46 @@ header{
     justify-content: center;
     background-color: white;
 }
-button{
+.incompleto{
     margin: 15px 25px;
-    color: #CBCBCB;
+    background-color: #CBCBCB;
     height: 61px;
     font-size: 20px;
     border-radius: 50px;
+    color: white;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+.incompleto:hover {
+    cursor: pointer;
+}
+.completo{
+    background-color:#32B72F;
+    color:white;
+    margin: 15px 25px;
+    height: 61px;
+    font-size: 20px;
+    border-radius: 50px; 
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+.completo:hover {
+    cursor: pointer;
 }
 span {
 font-family: 'Roboto', sans-serif;
 font-size: 18px;
 font-weight: 400;
 }
-.selecionado{
-    border-radius: 10px;
-    border: solid;
-    border-color: #32B72F;
+.pselecionado{
+    border-color:#32B72F;
+}
+.bselecionada{
+    border-color:#32B72F;
+}
+.sselecionada{
+    border-color:#32B72F;
+}
+.hidden {
+    display: none;
 }
