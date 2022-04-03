@@ -67,7 +67,7 @@ function retornar(){
   document.querySelector("body").classList.remove("noscroll");
 }
 function chamarWhatsApp(){
-  let mensagemenviada=`Olá, gostaria de fazer o pedido
+  let mensagemenviada=`Olá, gostaria de fazer o pedido:
   - Prato: ${document.querySelector(".pedidocomida").innerText}
   - Bebida: ${document.querySelector(".pedidobebida").innerText}
   - Sobremesa: ${document.querySelector(".pedidosobremesa").innerText}
