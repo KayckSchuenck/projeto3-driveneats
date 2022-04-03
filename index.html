@@ -82,12 +82,12 @@
     </div>
 </div>  
 <div class="barrafinal">
-    <button class="incompleto">Selecione os 3 itens para fechar o pedido</button>
+    <button class="incompleto">Selecione os 3 itens <br>para fechar o pedido</button>
     <button class="completo hidden" onclick="fecharpedido()">Fechar pedido</button>
 </div>
 <div class="confirmacao hidden">
     <h5>Confirme seu pedido</h5>
-    <div class="seupedido">
+    <div>
         <div class=" final">
             <div class="pedidocomida">Aqui vem o pedido</div> <div class="precocomida">Aqui vem o preço</div>
         </div>
@@ -97,13 +97,12 @@
         <div class="final">
             <div class="pedidosobremesa">Aqui vem o pedido</div> <div class="precosobremesa">Aqui vem o preço</div>
         </div>
-        <div class="total final">
+        <div class="final">
              Total <div class="precototal">Aqui vem o preço total</div>
         </div>
     </div>
-    <button class="continuar">Tudo certo, pode pedir</button><br>
-    <button class="cancelar">Cancelar</button>
-    
+    <button class="continuar" onclick="chamarWhatsApp()">Tudo certo, pode pedir</button><br>
+    <button class="cancelar" onclick="retornar()">Cancelar</button>  
 </div>
 <script src="scripts.js"></script>
 </body>

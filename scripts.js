@@ -1,3 +1,5 @@
+let nome;
+let endereco;
 function selecionarprato(elemento) {
     const item=document.querySelector(".pselecionado");
     if (item !== null) {
@@ -28,7 +30,8 @@ function botaofinal() {
   }
 }
 function fecharpedido() {
-  let endereco=prompt("Qual o seu endereço?")
+  endereco=prompt("Qual o seu endereço?")
+  nome=prompt("Qual o seu nome?")
   document.querySelector(".conteudo").classList.add("blur");
   document.querySelector("header").classList.add("blur");
   document.querySelector(".barrafinal").classList.add("blur");
@@ -36,27 +39,42 @@ function fecharpedido() {
   calculofinal()
 }
 function calculofinal(){
-  let comidapedida=document.querySelector(".pselecionado h2").innerText
-  document.querySelector(".pedidocomida").innerText=comidapedida
-  let bebidapedida=document.querySelector(".bselecionada h2").innerText
-  document.querySelector(".pedidobebida").innerText=bebidapedida
-  let sobremesapedida=document.querySelector(".sselecionada h2").innerText
-  document.querySelector(".pedidosobremesa").innerText=sobremesapedida
-  comidapedida=document.querySelector(".pselecionado h3").innerText
+  document.querySelector(".pedidocomida").innerText=document.querySelector(".pselecionado h2").innerText
+  document.querySelector(".pedidobebida").innerText=document.querySelector(".bselecionada h2").innerText
+  document.querySelector(".pedidosobremesa").innerText=document.querySelector(".sselecionada h2").innerText
+  let comidapedida=document.querySelector(".pselecionado h3").innerText
   document.querySelector(".precocomida").innerText=comidapedida
-  bebidapedida=document.querySelector(".bselecionada h3").innerText
+  let bebidapedida=document.querySelector(".bselecionada h3").innerText
   document.querySelector(".precobebida").innerText=bebidapedida
-  sobremesapedida=document.querySelector(".sselecionada h3").innerText
+  let sobremesapedida=document.querySelector(".sselecionada h3").innerText
   document.querySelector(".precosobremesa").innerText=sobremesapedida
-  let precocomidapedida=comidapedida.replace("R$ ","")
-  let precobebidapedida=bebidapedida.replace("R$ ","")
-  let precosobremesapedida=sobremesapedida.replace("R$ ","")
-  preco1=parseFloat(precocomidapedida.replace(",","."))
-  preco2=parseFloat(precobebidapedida.replace(",","."))
-  preco3=parseFloat(precosobremesapedida.replace(",","."))
+  let preco1=comidapedida.replace("R$ ","")
+  preco1=parseFloat(preco1.replace(",","."))
+  let preco2=bebidapedida.replace("R$ ","")
+  preco2=parseFloat(preco2.replace(",","."))
+  let preco3=sobremesapedida.replace("R$ ","")
+  preco3=parseFloat(preco3.replace(",","."))
   let valortotal=preco1+preco2+preco3
   valortotal=valortotal.toFixed(2)
   valortotal=valortotal + ""
   valortotal=valortotal.replace(".",",")
   document.querySelector(".precototal").innerText="R$ "+valortotal
+}
+function retornar(){
+  document.querySelector(".conteudo").classList.remove("blur");
+  document.querySelector("header").classList.remove("blur");
+  document.querySelector(".barrafinal").classList.remove("blur");
+  document.querySelector(".confirmacao").classList.add("hidden");
+}
+function chamarWhatsApp(){
+  let mensagemenviada=`Olá, gostaria de fazer o pedido
+  - Prato: ${document.querySelector(".pedidocomida").innerText}
+  - Bebida: ${document.querySelector(".pedidobebida").innerText}
+  - Sobremesa: ${document.querySelector(".pedidosobremesa").innerText}
+  Total: ${document.querySelector(".precototal").innerText}
+  
+  Nome: ${nome}
+  Endereço: ${endereco}`
+  mensagemenviada=window.encodeURIComponent(mensagemenviada)
+  window.open("https://wa.me/5532984278365?text=" + mensagemenviada)
 }
