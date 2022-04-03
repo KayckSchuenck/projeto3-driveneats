@@ -182,12 +182,19 @@ span {
 .hidden {
     display: none;
 }
-.blur{
-opacity: 30%;
+.opaco{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    filter:opacity(85%);
+    background-color: #FFFFFF;
 }
 .confirmacao{
     position: fixed;
-    z-index: 2;
+    z-index: 1;
     top: 50%;
     left:19px;
     transform: translate(0, -176px);
@@ -202,6 +209,9 @@ opacity: 30%;
     text-align:center;
     padding: 21px 24px 0px;
     box-shadow: 0px 0px 50px 1px #00000040;
+}
+.noscroll{
+    overflow: hidden;
 }
 .continuar{
     background-color: white;

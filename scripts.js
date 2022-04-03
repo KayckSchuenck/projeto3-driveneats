@@ -30,12 +30,13 @@ function botaofinal() {
   }
 }
 function fecharpedido() {
-  endereco=prompt("Qual o seu endereço?")
-  nome=prompt("Qual o seu nome?")
-  document.querySelector(".conteudo").classList.add("blur");
-  document.querySelector("header").classList.add("blur");
-  document.querySelector(".barrafinal").classList.add("blur");
+  if(endereco===undefined && nome===undefined){
+    endereco=prompt("Qual o seu endereço?")
+    nome=prompt("Qual o seu nome?")
+  }
+  document.querySelector(".opaco").classList.remove("hidden");
   document.querySelector(".confirmacao").classList.remove("hidden");
+  document.querySelector("body").classList.add("noscroll");
   calculofinal()
 }
 function calculofinal(){
@@ -61,17 +62,16 @@ function calculofinal(){
   document.querySelector(".precototal").innerText="R$ "+valortotal
 }
 function retornar(){
-  document.querySelector(".conteudo").classList.remove("blur");
-  document.querySelector("header").classList.remove("blur");
-  document.querySelector(".barrafinal").classList.remove("blur");
+  document.querySelector(".opaco").classList.add("hidden");
   document.querySelector(".confirmacao").classList.add("hidden");
+  document.querySelector("body").classList.remove("noscroll");
 }
 function chamarWhatsApp(){
   let mensagemenviada=`Olá, gostaria de fazer o pedido
   - Prato: ${document.querySelector(".pedidocomida").innerText}
   - Bebida: ${document.querySelector(".pedidobebida").innerText}
   - Sobremesa: ${document.querySelector(".pedidosobremesa").innerText}
-  Total: ${document.querySelector(".precototal").innerText}
+  Total: ${document.querySelector(".precototal").innerText.replace(",",".")}
   
   Nome: ${nome}
   Endereço: ${endereco}`
